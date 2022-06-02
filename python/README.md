@@ -3,9 +3,11 @@
 ## Language: `Python`
 
 ### Table of Contents
-[Code Challenge 1](./code_challenges/array-reverse/README.md)
-[Code Challenge 2](./code_challenges/array-insert-shift/README.md)
-[Code Challenge 3](./code_challenges/array-insert-shift/README.md)
+ - [Code Challenge 1](./code_challenges/array-reverse/README.md)
+ - [Code Challenge 2](./code_challenges/array-insert-shift/README.md)
+ - [Code Challenge 3](./code_challenges/array-insert-shift/README.md)
+ - [Code Challenge 5](./docs/linked_list_insertions/README.md)
+
 
 ### Folder and Challenge Setup
 
