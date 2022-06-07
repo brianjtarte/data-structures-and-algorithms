@@ -40,6 +40,42 @@ class LinkedList:
     def to_string(self):
         pass
 
+    def append(self, new_value):
+        current = self.head
+        while current.next:
+            current = current.next
+        else:
+            new_node = Node(new_value)
+            current.next = new_node
+
+    def insert_before(self, old_value, new_value):
+        current = self.head
+        if self.includes(old_value):
+            while current:
+                if current.value == old_value:
+                    self.insert(new_value)
+                    break
+                elif current.next.value == old_value:
+                    new_node = Node(new_value, current.next)
+                    current.next = new_node
+                    break
+                current = current.next
+        else:
+            raise TargetError
+
+    def insert_after(self, old_value, new_value):
+        current = self.head
+        while current.value is old_value:
+            new_node = Node(new_value)
+            new_node.next = current.next
+            current.next = new_node
+            current = current.next
+
+        else:
+            current.next
+
 
 class TargetError:
     pass
+
+
