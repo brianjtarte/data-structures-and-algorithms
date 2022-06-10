@@ -54,14 +54,14 @@ class LinkedList:
             while current:
                 if current.value == old_value:
                     self.insert(new_value)
-                    break
+                    return
                 elif current.next.value == old_value:
                     new_node = Node(new_value, current.next)
                     current.next = new_node
-                    break
+                    return
                 current = current.next
         else:
-            raise TargetError
+            raise TargetError('WRONG')
 
     def insert_after(self, old_value, new_value):
         current = self.head
@@ -74,8 +74,17 @@ class LinkedList:
         else:
             current.next
 
+    def kth_from_end(self, k):
+        current = self.head
+        kth_value = []
+        while current:
+            kth_value.append(current.value)
+            current = current.next
+        if k > len(kth_value):
+            return None
+        else:
+            return kth_value[-k-1]
 
 class TargetError:
     pass
-
 

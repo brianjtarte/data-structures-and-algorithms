@@ -7,6 +7,8 @@
  - [Code Challenge 2](./code_challenges/array-insert-shift/README.md)
  - [Code Challenge 3](./code_challenges/array-insert-shift/README.md)
  - [Code Challenge 5](./docs/linked_list_insertions/README.md)
+ - [Code Challenge 6](./docs/linked_list_insertions/README.md)
+ - [Code Challenge 7](./docs/linked_list_kth/README.md)
 
 
 ### Folder and Challenge Setup
