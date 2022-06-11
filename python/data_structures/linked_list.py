@@ -61,30 +61,40 @@ class LinkedList:
                     return
                 current = current.next
         else:
-            raise TargetError('WRONG')
+            raise TargetError
 
     def insert_after(self, old_value, new_value):
         current = self.head
-        while current.value is old_value:
-            new_node = Node(new_value)
-            new_node.next = current.next
-            current.next = new_node
+        while current.value is old_value:  # while the current value is the old value
+            new_node = Node(new_value)  # creating variable new_node and assigning it to a new Node w/new_value
+            new_node.next = current.next  # new_node.next is now the current.next
+            current.next = new_node  # current.next is now new_node, effectively inserting our newly created Node
             current = current.next
 
         else:
             current.next
 
     def kth_from_end(self, k):
+
         current = self.head
         kth_value = []
-        while current:
-            kth_value.append(current.value)
-            current = current.next
-        if k > len(kth_value):
-            return None
+        if k < 0:  # if k is less than 0, we want to raise an exception
+            raise TargetError
         else:
-            return kth_value[-k-1]
 
-class TargetError:
+            try:
+
+                while current:
+                    kth_value.append(current.value)  # appending current node value to kth_value empty list
+                    current = current.next
+                if k > len(kth_value):  # if the value of k is greater than the length of the list, return none
+                    return None
+                else:
+                    return kth_value[-k - 1]  # else, give us the last value of the list at the the value of k
+
+            except:
+                raise TargetError
+
+
+class TargetError(Exception):
     pass
-
