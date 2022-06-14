@@ -96,5 +96,10 @@ class LinkedList:
                 raise TargetError
 
 
+
+
+
+
+
 class TargetError(Exception):
     pass
