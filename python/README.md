@@ -9,7 +9,7 @@
  - [Code Challenge 5](./docs/linked_list_insertions/README.md)
  - [Code Challenge 6](./docs/linked_list_insertions/README.md)
  - [Code Challenge 7](./docs/linked_list_kth/README.md)
-
+ - [Code Challenge 8](code_challenges/linked_list_zip/README.md)
 
 ### Folder and Challenge Setup
 
