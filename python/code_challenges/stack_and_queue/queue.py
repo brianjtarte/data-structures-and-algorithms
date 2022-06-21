@@ -1,4 +1,4 @@
-from python.data_structures.invalid_operation_error import InvalidOperationError
+# from python.data_structures.invalid_operation_error import InvalidOperationError
 
 
 class Node:
@@ -21,11 +21,13 @@ class Queue:
 
         if self.rear:
             self.rear.next = node
+        self.rear = node
 
         if self.front is None:
             self.front = node
 
-        self.rear = node
+
+
 
 
     def dequeue(self):
@@ -35,17 +37,36 @@ class Queue:
             temp.next = None
             return temp.value
         else:
-                raise InvalidOperationError()
-
+                # raise InvalidOperationError()
+            pass
     def peek(self):
         if self.front:
             return self.front.value
         else:
-            raise InvalidOperationError()
-
+            # raise InvalidOperationError()
+            pass
 
     def is_empty(self):
         if self.front is None:
             return True
         else:
-            raise InvalidOperationError()
+            # raise InvalidOperationError()
+            pass
+
+    def print(self):
+        current = self.front
+        while current:
+            print(current.value)
+            current = current.next
+
+
+if __name__ == '__main__':
+    queue = Queue()
+    queue.enqueue(1)
+    queue.enqueue(2)
+    queue.enqueue(3)
+    queue.print()
+    queue.dequeue()
+    queue.print()
+
+

@@ -1,17 +1,17 @@
-# Code Challenge 10
+# Code Challenge 10 & 11
 
-## Collaborators: Brendon
+## Collaborators: Brendon, Sergii
 ### Stack and Queue
 **Problem Domain:**
 
-#### Using a Linked List as the underlying data storage mechanism, implement both a Stack and a Queue
+####  Code Challenge 10:Using a Linked List as the underlying data storage mechanism, implement both a Stack and a Queue
 
 **Node**
- - Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.
+- Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.
 **Stack**
- - Create a Stack class that has a top property. It creates an empty Stack when instantiated.
- - This object should be aware of a default empty value assigned to top when the stack is created.
- - The class should contain the following methods:
+- Create a Stack class that has a top property. It creates an empty Stack when instantiated.
+- This object should be aware of a default empty value assigned to top when the stack is created.
+- The class should contain the following methods:
  1. **push**
       - Arguments: value
       - adds a new node with that value to the top of the stack with an O(1) Time performance.
@@ -50,13 +50,28 @@
 
 *You have access to the Node class and all the properties on the Linked List class.*
 
+#### Code Challenge 11:
+- Create a new class called pseudo queue.
+- Do not use an existing Queue.
+- Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below),
+- Internally, utilize 2 Stack instances to create and manage the queue
+  - Methods:
+  - enqueue
+  - Arguments: value
+  - Inserts value into the PseudoQueue, using a first-in, first-out approach.
+  - dequeue
+  - Arguments: none
+  - Extracts a value from the PseudoQueue, using a first-in, first-out approach.
+
 
 ## Whiteboard Process
-N/A
+We collaborated on the whiteboard all together
+![pseudo](pseudo_queue.png)
 
 Linke to code:
 [Stack](stack.py)
 [Queue](queue.py)
+[Pseudo](stack_queue_pseudo.py)
 
 ## Approach & Efficiency
 
