@@ -1,29 +1,19 @@
 from python.code_challenges.stack_and_queue.stack import Stack
 
 
-def multi_bracket_validation(str):
-    # bracket_dictionary = {'[' : ']', '{' : '}', '(':')'}
+def multi_bracket_validation(text):
+    brackets = {
+        ')': '(',
+        '}': '{',
+        ']': '['
+    }
     brack_stack = Stack()
-    for brack in range(len(str)):
-        if brack == '[' or brack == '{' or brack == '(':
-            brack_stack.push(brack)
-            print('Here we are line 10', brack_stack.value)
-
-        if brack == ']' or brack == '}' or brack == ')':
+    for bracket in text:
+        if bracket in brackets.values():
+            brack_stack.push(bracket)
+        elif bracket in brackets:
             if brack_stack.is_empty():
-                return True
-
-            else:
-                brack_stack.pop()
-
-
-        else:
-            return True
-
-
-
-
-
-
-
-
+                return False
+            elif brackets[bracket] != brack_stack.pop():
+                return False
+    return brack_stack.is_empty()
