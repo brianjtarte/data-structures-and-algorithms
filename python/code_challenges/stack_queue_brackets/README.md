@@ -29,4 +29,5 @@ pytest tests/code_challenges/test_stack_queue_brackets.py
 
 ## Notes:
 - We have the half of the tests passing, however, we have work to do with the code to get the remaining tests passing.
+- 7/2: Have all tests passing, we needed to incorporate a dictionary
 
