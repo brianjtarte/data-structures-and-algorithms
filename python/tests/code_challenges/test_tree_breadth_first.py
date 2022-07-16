@@ -47,6 +47,26 @@ def test_four_nodes():
     assert actual == expected
 
 
+
+def test_all_lefts():
+    tree = BinaryTree()
+    tree.root = Node("apples")
+    tree.root.left = Node("chickens")
+    tree.root.left.left = Node("apple chickens")
+    expected = ["apples", "chickens", "apple chickens"]
+    actual = breadth_first(tree)
+    assert actual == expected
+
+def test_all_rights():
+    tree = BinaryTree()
+    tree.root = Node("apples")
+    tree.root.right = Node("chickens")
+    tree.root.right.right = Node("apple chickens")
+    expected = ["apples", "chickens", "apple chickens"]
+    actual = breadth_first(tree)
+    assert actual == expected
+
+
 # @pytest.mark.skip("TODO")
 def test_example_from_reading():
     """
