@@ -3,8 +3,8 @@ class BinaryTree:
     Put docstring here
     """
 
-    def __init__(self):
-        pass
+    def __init__(self, root=None):
+        self.root = root
 
     def pre_order(self):
 
