@@ -1,11 +1,11 @@
 from python.code_challenges.trees.binary_tree import BinaryTree
 from python.data_structures.kary_tree import KaryTree, Node
-
+import copy
 
 def fizz_buzz_tree(kary_tree):
     if kary_tree is None:
         return None
-    ktree = kary_tree
+    ktree = copy.deepcopy(kary_tree)
 
     def fizzy_helper(root):
         if root.value % 3 == 0 and root.value % 5 == 0:
