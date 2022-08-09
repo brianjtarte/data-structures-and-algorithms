@@ -53,6 +53,10 @@ class Queue:
             # raise InvalidOperationError()
             pass
 
+    def clockwise(self, shift):
+        for letter in shift:
+            dequeue
+
     def print(self):
         current = self.front
         while current:
