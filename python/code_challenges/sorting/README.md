@@ -21,7 +21,7 @@ Review the pseudocode below, then trace the algorithm by stepping through the pr
 ## Collaborators: Brendon H
 
 ## Whiteboard Process (BLOG)
-
+![merge](merge_sort.png)
 
 ## Approach & Efficiency
 Time: O(n^2) - iterating through an array recursively while calling a helper functions
