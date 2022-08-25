@@ -47,6 +47,15 @@ def test_edge_case():
     expected = "Used for apple sauce"
     assert actual == expected
 
+def test_collision_case():
+    hashtable = Hashtable()
+    hashtable.set("apple", "Used for apple sauce")
+    hashtable.set("apple", "Used for apple juice")
+    actual = hashtable.get("apple")
+    expected = "Used for apple sauce", "Used for apple juice"
+    assert actual == expected
+
+
 # @pytest.mark.skip("TODO")
 # def test_internals():
 #     hashtable = Hashtable(1024)
