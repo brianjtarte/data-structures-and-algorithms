@@ -12,7 +12,8 @@
 ![repeated_word](hashtable-repeated-word.png)
 
 ## Approach & Efficiency
-Space: O(n) because we use a for loop
-Time: O(1) because it runs one time
+ - Space: O(n) because we use a for loop
+ - Time: O(1) because it runs one time
 ## Solution
 pytest tests/code_challenges/test_hashable_repeated_word.py
+[Link to Code](python/code_challenges/hashtable_repeated_word.py)
