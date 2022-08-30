@@ -2,7 +2,7 @@ from python.data_structures.linked_list import LinkedList, Node
 
 
 class Hashtable:
-    def __init__(self, size=1024):
+    def __init__(self, size=10):
         self.size = size
         self._buckets = size * [None]
 
