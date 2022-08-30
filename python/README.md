@@ -18,6 +18,7 @@
  - [Code Challenge 18](code_challenges/tree_fizz_buzz/README.md)
  - [Code Challenge 30](code_challenges/hashtable/README.md)
  - [Code Challenge 31](code_challenges/hashtable_repeated_word/README.md)
+ - [Code Challenge 32](code_challenges/tree_intersection/README.md)
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
