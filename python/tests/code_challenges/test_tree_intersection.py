@@ -24,6 +24,41 @@ def test_tree_intersection():
 
     assert sorted(actual) == sorted(expected)
 
+# @pytest.mark.skip("TODO")
+def test_tree_intersection_string():
+
+    tree_a = BinaryTree()
+    values = ['a', 'b', 'c']
+    add_values_to_empty_tree(tree_a, values)
+
+    tree_b = BinaryTree()
+    values = ['a', 'c', 'd']
+    add_values_to_empty_tree(tree_b, values)
+
+    actual = tree_intersection(tree_a, tree_b)
+    expected = ['a', 'c']
+
+    assert sorted(actual) == sorted(expected)
+
+
+
+
+@pytest.mark.xfail
+def test_tree_intersection_string_int():
+
+    tree_a = BinaryTree()
+    values = ['a', 4, 'b', 'c', 2]
+    add_values_to_empty_tree(tree_a, values)
+
+    tree_b = BinaryTree()
+    values = ['a', 'c', 2, 'd']
+    add_values_to_empty_tree(tree_b, values)
+
+    actual = tree_intersection(tree_a, tree_b)
+    expected = ['a', 'c', 2]
+
+    assert sorted(actual) == sorted(expected)
+
 
 def add_values_to_empty_tree(tree, values):
     """
